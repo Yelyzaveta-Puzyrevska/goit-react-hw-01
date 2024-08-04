@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  width: 300px;
+  height: 300px;
+}
+
+.fullname {
+  text-align: center;
+  color: blue;
+}
