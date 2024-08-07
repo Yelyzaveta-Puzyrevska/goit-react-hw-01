@@ -5,7 +5,7 @@
 }
 
 .avatar {
-  width: 300px;
+  width: 160px;
   border-radius: 10%;
 }
 
@@ -54,8 +54,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 130px;
-  height: 130px;
+  width: 80px;
+  height: 80px;
   background-color: rgb(148, 209, 229);
   border: 2px solid rgb(129, 129, 163);
   margin: 10px;
