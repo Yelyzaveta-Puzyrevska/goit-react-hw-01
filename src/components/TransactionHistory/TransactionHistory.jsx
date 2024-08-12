@@ -11,6 +11,7 @@ const TransactionHistory = ({ items }) => {
           <th>Currency</th>
         </tr>
       </thead>
+
       <tbody>
         {items.map(({ id, type, amount, currency }) => (
           <tr key={id}>
@@ -23,6 +24,14 @@ const TransactionHistory = ({ items }) => {
     </table>
   );
 };
+
+// {
+//   User.map((item, index) => (
+//     <div className={clsx(s.item, index % 2 !== 0 && s.gray)} key={item.id}>
+//       {item}
+//     </div>
+//   ));
+// }
 
 TransactionHistory.propTypes = {
   items: PropTypes.arrayOf(
