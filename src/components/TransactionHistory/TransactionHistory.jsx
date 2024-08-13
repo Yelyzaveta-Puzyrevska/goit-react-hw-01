@@ -1,20 +1,26 @@
-import PropTypes from "prop-types";
 import styles from "./TransactionHistory.module.css";
+import clsx from "clsx";
 
 const TransactionHistory = ({ items }) => {
   return (
     <table className={styles.transactionHistory}>
       <thead>
-        <tr>
+        <tr className={styles.title}>
           <th>Type</th>
           <th>Amount</th>
           <th>Currency</th>
         </tr>
       </thead>
 
-      <tbody>
-        {items.map(({ id, type, amount, currency }) => (
-          <tr key={id}>
+      <tbody className={styles.wrapper}>
+        {items.map(({ id, type, amount, currency }, index) => (
+          <tr
+            className={clsx(
+              styles.item,
+              index % 2 !== 0 ? styles.gray : styles.white
+            )}
+            key={id}
+          >
             <td>{type}</td>
             <td>{amount}</td>
             <td>{currency}</td>
@@ -23,25 +29,6 @@ const TransactionHistory = ({ items }) => {
       </tbody>
     </table>
   );
-};
-
-// {
-//   User.map((item, index) => (
-//     <div className={clsx(s.item, index % 2 !== 0 && s.gray)} key={item.id}>
-//       {item}
-//     </div>
-//   ));
-// }
-
-TransactionHistory.propTypes = {
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      type: PropTypes.string.isRequired,
-      amount: PropTypes.string.isRequired,
-      currency: PropTypes.string.isRequired,
-    })
-  ).isRequired,
 };
 
 export default TransactionHistory;

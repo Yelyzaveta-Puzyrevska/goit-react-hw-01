@@ -1,21 +1,19 @@
-.transactionHistory {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center;
+.wrapper {
+  background-color: white;
+  gap: 2px;
+  padding: 2px;
 }
 
-.transactionHistory th,
-.transactionHistory td {
-  padding: 10px;
-  border: 1px solid #9f9c9c;
-}
-
-.transactionHistory th {
-  background-color: #f2f2f2;
+.grey {
+  background-color: lightcyan;
 }
 .white {
-  background-color: #f2f2f2;
+  background-color: aliceblue;
 }
-.grey {
-  background-color: lightgray;
+/* .item {
+  padding: 20px;
+} */
+
+.title {
+  background-color: lavender;
 }
