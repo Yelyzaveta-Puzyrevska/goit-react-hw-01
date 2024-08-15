@@ -1,11 +1,5 @@
 import styles from "./FriendListItem.module.css";
 
-<div>
-  <img src="" alt="Avatar" width="48" />
-  <p>Friend name</p>
-  <p>Friend status</p>
-</div>;
-
 const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <div className={styles.friendItem}>
